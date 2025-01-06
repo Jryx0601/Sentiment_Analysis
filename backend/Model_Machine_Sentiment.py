@@ -62,7 +62,6 @@ svm.fit(X_train,y_train)
 
 def Prediction(txt):
     #Preprocess
-    print(txt)
     preprocess_txt = [function_preprocessing(txt['text'])]
     vectorizer_txt = vectorizer.transform(preprocess_txt)
     prediction = svm.predict(vectorizer_txt)

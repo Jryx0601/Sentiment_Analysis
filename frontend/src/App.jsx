@@ -17,7 +17,7 @@ function App() {
       headers:{
         "Content-Type":"application/json"
       },
-      body:JSON.stringify({Comments:data})
+      body:JSON.stringify(data)
     }
     const response = await fetch(url,options)
     const response_2 = await response.json()
