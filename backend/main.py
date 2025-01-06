@@ -6,7 +6,7 @@ from Model_Machine_Sentiment import Prediction
 def predict_comment():
     text = request.json.get('Comments')
     predicted = Prediction(text)
-    return jsonify({'sentiment':predicted})
+    return jsonify({'sentiment':predicted[0]})
 
 if __name__ == "__main__":
     app.run(debug=True)
